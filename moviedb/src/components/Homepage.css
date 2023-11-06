@@ -62,13 +62,13 @@ button:hover {
         gap: 10px;
     }
     .movie-card {
-        width: 25rem;
+        width: 20rem;
     }
     input[type="search"] {
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        width: 300px;
+        width: 150px;
     }
 }
 
