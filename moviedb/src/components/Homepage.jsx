@@ -15,7 +15,7 @@ const Homepage = ({ setMovie, setContent, movie }) => {
 
     const handleSearch = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/search?query=${search}`);
+            const response = await axios.get(`https://moviesdb-ux9t.onrender.com//search?query=${search}`);
             if(search===''&&response.data.results.length===0) {
                 Swal.fire('Please enter movie name')
             }
@@ -35,8 +35,10 @@ const Homepage = ({ setMovie, setContent, movie }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const movies = await axios.get('http://localhost:8080/');
+            const movies = await axios.get('https://moviesdb-ux9t.onrender.com/');
+            console.log("HP",movies)
             setState(movies.data.results);
+            console.log("HP",state)
         };
         fetchData();
     }, [search]);
