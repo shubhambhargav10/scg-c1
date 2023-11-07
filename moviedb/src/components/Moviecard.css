@@ -79,4 +79,7 @@ button:hover {
     .container {
         flex-direction: column;
     }
+    .dark-container {
+        flex-direction: column;
+    }
 }
