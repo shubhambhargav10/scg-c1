@@ -9,6 +9,7 @@ This is a Movie List web application that allows users to browse a collection of
 - Display a list of movies from a public API.
 - Click on a movie to view its details.
 - Responsive design for various screen sizes.
+- Added theme feature to provide a more customizable and visually appealing user experience.
 
 ## Demo
 https://drive.google.com/file/d/1YtC8MbmsAFZib1RoezngJKustKgyGF-G/view?usp=drive_link
