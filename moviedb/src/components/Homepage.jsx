@@ -4,7 +4,7 @@ import './Homepage.css'
 import Swal from 'sweetalert2';
 import {FallingLines} from 'react-loader-spinner'
 
-const Homepage = ({ setMovie, setContent, movie }) => {
+const Homepage = ({ setMovie, setContent, movie,theme }) => {
     const [state, setState] = useState([]);
     const [search, setSearch] = useState('');
     const[searchWord, setSearchWord] = useState(false);
@@ -93,16 +93,16 @@ const Homepage = ({ setMovie, setContent, movie }) => {
             {showLoaderContent}
         </div>
     </div>:
-        <div className='homepage-container'>
+        <div className={theme === 'light' ? 'homepage-container' : 'homepage-dark'}>
             <div className='search-container'>
                 <input type="search" placeholder="Search for a movie..." onChange={handleChange} />
                 <button className='button-home' onClick={handleSearch}>Search</button>
             </div>
             <div className='movie-grid'>
                 {state.map((ele, index) => (
-                    <div className='movie-card' onClick={() => displayDetails(ele)} key={index}>
+                    <div className={theme==='light'?'movie-card':'movie-card-dark'} onClick={() => displayDetails(ele)} key={index}>
                         <img src={`https://image.tmdb.org/t/p/w500${ele.poster_path}`} alt={movie.title} />
-                        <h2 style={{ textAlign: 'center', fontSize: '18px', fontFamily: 'TimesNewRoman', color: '#333',fontWeight: 'lighter'  }}>{ele.title}</h2>
+                        <h2 style={{ textAlign: 'center', fontSize: '18px', fontFamily: 'TimesNewRoman', color: theme==='light'?'#333':'white',fontWeight: 'lighter'  }}>{ele.title}</h2>
                     </div>
                 ))}
             </div>

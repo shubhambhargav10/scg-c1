@@ -8,8 +8,19 @@
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     font-weight: 'sans-serif';
+    color: black;
 }
-
+.dark-container{
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(234, 229, 229, 0.977);
+    font-weight: 'sans-serif';
+}
 .image {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
