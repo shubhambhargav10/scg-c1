@@ -58,10 +58,10 @@ const Homepage = ({ setMovie, setContent, movie,theme }) => {
         const fetchData = async () => {
            
              timerId = setTimeout(()=>{
-                setShowLoaderContent('Its taking longer than usual..')
-            },5000)
+                setShowLoaderContent('Still loading..! Sorry for the long wait :(')
+            },3500)
              timerId2 = setTimeout(()=>{
-                setShowLoaderContent('We are trying to establish connection..please wait')
+                setShowLoaderContent('We are trying to establish connection..')
             },8000)
             const movies = await axios.get('https://moviesdb-ux9t.onrender.com/');
             console.log("HP",movies)
