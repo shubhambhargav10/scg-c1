@@ -45,7 +45,7 @@ h3 {
     color: #0074D9;
 }
 
-button {
+.button-card {
     background-color: #0074D9;
     color: white;
     border: none;
@@ -55,6 +55,9 @@ button {
     font-size: 18px;
     font-weight: 600;
     transition: background-color 0.3s;
+    width: -webkit-fill-available;
+    margin-top: 1rem;
+    
 }
 
 button:hover {

@@ -1,16 +1,21 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+require('dotenv').config();
 
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: '*', 
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  }));
 
 app.get('/', async (req, res)=>{
     
     try {
-        const data = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=bf180fafe8b3fdddf1e7c27ee8252434')
+        const data = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=bf180fafe8b3fdddf1e7c27ee8252434`)
         res.send(data.data)
     }
   catch(err) {

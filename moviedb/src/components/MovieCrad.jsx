@@ -19,10 +19,11 @@ const MovieCard = ({ movie, setContent }) => {
             {movie && (
                 <div>
                     <h2>{movie.original_title}</h2>
-                    <h4>Popularity: {movie.popularity}</h4>
-                    <h4>Vote Count: {movie.vote_count}</h4>
-                    <h3>Year: {movie.release_date}</h3>
-                    <button onClick={goBack}>Go Back</button>
+                    <h4 style={{marginTop:'1rem'}}>Overview: <span style={{fontWeight:'lighter'}}>{movie.overview}</span></h4>
+                    <h4 style={{marginTop:'1rem'}}>Vote Count: <span style={{fontWeight:'lighter'}}>{movie.popularity}K votes</span></h4>
+                    <h4 style={{marginTop:'1rem'}}>Popularity: <span style={{fontWeight:'lighter'}}>{movie.vote_count}M people likes this!</span></h4>
+                    <h3 style={{marginTop:'1rem'}}>Release Date: <span style={{fontWeight:'lighter'}}>{movie.release_date}</span></h3>
+                    <button className='button-card' onClick={goBack}>Go Back</button>
                 </div>
             )}
         </div>

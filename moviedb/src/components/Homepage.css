@@ -21,7 +21,7 @@ input[type="search"] {
     width: 900px;
 }
 
-button {
+.button-home {
     background-color: #d9c000;
     color: white;
     border: none;
