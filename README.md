@@ -11,6 +11,7 @@ This is a Movie List web application that allows users to browse a collection of
 - Responsive design for various screen sizes.
 
 ## Demo
+https://scg-c1-shubham.vercel.app/
 
 ## Technologies Used
 
